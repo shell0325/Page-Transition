@@ -1,9 +1,9 @@
-const express = require('express'),
-  app = express(),
-  router = require('./router/router');
-
+var express = require('express'),
+  app = express();
+var index = require('./router/index');
 app.set('view engine', 'ejs');
 
-app.use('/', router);
+
+app.use(index);
 
 app.listen(3000);
